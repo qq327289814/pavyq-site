@@ -1,0 +1,89 @@
+/* Preserve the whole product at the page's main breakpoints. */
+.hero {
+  height: min(100svh, 56.25vw);
+  min-height: 590px;
+}
+
+.hero-image {
+  background-image: url('assets/g1-hero-natural-wide.jpg');
+  background-position: center;
+  transform: none;
+}
+
+@media (max-width: 800px) {
+  .hero {
+    height: 730px;
+    min-height: 0;
+  }
+
+  .hero-image {
+    background-size: auto 55%;
+    background-position: 78% 0;
+  }
+
+  .hero-veil {
+    background: linear-gradient(0deg, #07170ef5 0%, #07170eb8 38%, #07170e00 72%);
+  }
+
+  .hero-copy {
+    bottom: 16%;
+  }
+}
+
+/* Product-platform and evidence sections. */
+.platform {
+  display: grid;
+  grid-template-columns: minmax(230px, .54fr) 1fr;
+  gap: 11%;
+  align-items: center;
+  background: #f9f8f3;
+}
+
+.platform-visual { max-width: 325px; margin: auto; }
+.platform-visual img { display: block; width: 100%; border-radius: 20px; box-shadow: 0 22px 40px #10261c1c; }
+.platform-visual p { margin: 13px 0 0; font: 10px DM Mono, monospace; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+.platform-copy h2 { font-size: clamp(43px, 5.2vw, 76px); }
+.platform-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 31px; }
+.platform-tags span { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; font: 10px DM Mono, monospace; letter-spacing: .06em; text-transform: uppercase; }
+.proof { background: #10261c; color: #fff; }
+.proof .eyebrow { color: var(--acid); }
+.proof h2 { max-width: 770px; }
+.proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 65px; }
+.proof-grid article { min-height: 260px; padding: 22px; border-top: 1px solid #ffffff55; background: #ffffff0d; }
+.proof-grid span { font: 10px DM Mono, monospace; color: var(--acid); }
+.proof-grid h3 { margin: 86px 0 11px; font-size: 23px; letter-spacing: -.045em; }
+.proof-grid p { margin: 0; color: #d4dfd7; font-size: 14px; line-height: 1.65; }
+.configuration { background: #e2e2da; }
+.configuration .two-col { align-items: end; }
+.configuration .two-col h2 { font-size: clamp(43px, 5.2vw, 76px); }
+.configuration-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 65px; }
+.configuration-grid article { min-height: 220px; padding: 28px; border: 1px solid #aab4ab; }
+.configuration-grid h3 { margin: 66px 0 11px; font-size: 28px; letter-spacing: -.055em; }
+.configuration-grid p:last-child { max-width: 420px; margin: 0; color: #526058; font-size: 14px; line-height: 1.65; }
+.product-detail { position: relative; min-height: min(67vw, 900px); overflow: hidden; color: #fff; background: #141414; }
+.product-detail img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.product-detail::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #07100ce8 0%, #07100c86 38%, #07100c00 72%); }
+.detail-copy { position: relative; z-index: 1; max-width: 620px; padding: 12% 10%; }
+.detail-copy h2 { font-size: clamp(46px, 5.6vw, 84px); }
+.detail-copy > p:last-child { max-width: 420px; color: #d7e0da; font-size: 16px; line-height: 1.7; }
+.gallery { background: #f9f8f3; }
+.gallery h2 { font-size: clamp(43px, 5.2vw, 76px); }
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 60px; }
+.gallery-grid figure { margin: 0; overflow: hidden; background: #171717; }
+.gallery-grid img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; transition: transform .5s ease; }
+.gallery-grid figure:hover img { transform: scale(1.025); }
+.gallery-grid figcaption { padding: 13px 16px; color: #dce3de; font: 10px DM Mono, monospace; letter-spacing: .1em; text-transform: uppercase; }
+
+@media (max-width: 800px) {
+  .platform { display: block; }
+  .platform-copy { margin-top: 42px; }
+  .proof-grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .proof-grid article { min-height: 210px; }
+  .proof-grid h3 { margin-top: 42px; }
+  .configuration-grid { grid-template-columns: 1fr; margin-top: 40px; }
+  .configuration-grid h3 { margin-top: 42px; }
+  .product-detail { min-height: 660px; }
+  .product-detail img { object-position: 60% center; }
+  .detail-copy { padding: 64% 7% 12%; }
+  .gallery-grid { grid-template-columns: 1fr; margin-top: 38px; }
+}

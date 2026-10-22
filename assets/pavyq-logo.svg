@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="480" viewBox="0 0 1500 480" role="img" aria-label="PAVYQ primary horizontal logo">
+  <g transform="translate(38 8) scale(.9)">
+    <path d="M112 426V86h142c114 0 186 57 186 155 0 99-72 156-186 156h-80" fill="none" stroke="#10261C" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m275 283 154 154" fill="none" stroke="#D7ED6D" stroke-width="47" stroke-linecap="round"/>
+  </g>
+  <text x="540" y="318" fill="#10261C" font-family="Arial, Helvetica, sans-serif" font-size="210" font-weight="800" letter-spacing="19">PAVYQ</text>
+</svg>

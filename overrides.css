@@ -1,0 +1,562 @@
+.contact > p:last-of-type {
+  max-width: 520px;
+}
+
+/* One compact language control replaces the former row of flags. */
+.language-picker {
+  position: relative;
+  z-index: 12;
+}
+
+.language-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 82px;
+  min-height: 38px;
+  padding: 7px 10px;
+  border: 1px solid #ffffff55;
+  border-radius: 999px;
+  background: #07170e4d;
+  color: #fff;
+  font: 600 11px/1 Manrope, Arial, sans-serif;
+  letter-spacing: .06em;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.language-trigger:hover,
+.language-trigger[aria-expanded="true"] {
+  border-color: #d7ed6daa;
+  background: #07170e8a;
+}
+
+.language-trigger:focus-visible,
+.language-menu button:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 2px;
+}
+
+.language-flag {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.language-chevron {
+  margin-top: -3px;
+  color: var(--acid);
+  font-size: 15px;
+  transition: transform .2s ease;
+}
+
+.language-trigger[aria-expanded="true"] .language-chevron {
+  transform: rotate(180deg);
+}
+
+.language-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 208px;
+  padding: 7px;
+  border: 1px solid #ffffff2c;
+  border-radius: 12px;
+  background: #0b1912f5;
+  box-shadow: 0 18px 48px #02100866;
+  backdrop-filter: blur(18px);
+}
+
+.language-menu[hidden] {
+  display: none;
+}
+
+.language-menu button {
+  display: grid;
+  grid-template-columns: 27px 1fr auto;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 40px;
+  padding: 7px 9px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #eaf1eb;
+  font: 500 12px/1.2 Manrope, Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+.language-menu button > span:first-child {
+  font-size: 18px;
+}
+
+.language-menu button small {
+  color: #92a097;
+  font: 500 9px/1 DM Mono, monospace;
+  letter-spacing: .08em;
+}
+
+.language-menu button:hover,
+.language-menu button.active {
+  background: #ffffff12;
+}
+
+.language-menu button.active {
+  color: var(--acid);
+}
+
+.language-menu button.active small::before {
+  content: '✓ ';
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .language-menu {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .language-menu button {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-link,
+html[dir="rtl"] .button {
+  direction: rtl;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid #ffffff66;
+  color: #fff;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.brand-lockup img {
+  display: block;
+  width: 132px;
+  height: auto;
+}
+
+.footer-lockup img {
+  width: 108px;
+}
+
+.benefit-grid article {
+  min-height: 0;
+  padding: 24px 26px 30px 0;
+  display: block;
+}
+
+.benefit-grid h3 {
+  margin: 32px 0 9px;
+  font-size: 21px;
+}
+
+.benefit-grid p {
+  max-width: 245px;
+  line-height: 1.62;
+}
+
+.platform-visual {
+  max-width: 430px;
+}
+
+.platform-visual img {
+  border-radius: 14px;
+  box-shadow: 0 18px 38px #10261c17;
+}
+
+.gallery-heading {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 10%;
+  align-items: end;
+}
+
+.gallery-heading h2 {
+  margin-bottom: 0;
+}
+
+.gallery-intro {
+  max-width: 390px;
+  margin: 0 0 6px;
+  color: #526058;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.gallery-viewer {
+  margin-top: 54px;
+  border: 1px solid #aeb8af;
+  background: #10261c;
+}
+
+.gallery-stage {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #10261c;
+  cursor: zoom-in;
+}
+
+.gallery-stage img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  transition: opacity .18s ease, transform .45s ease;
+}
+
+.gallery-stage:hover img {
+  transform: scale(1.012);
+}
+
+.gallery-open-label {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding: 10px 13px;
+  border: 1px solid #ffffff66;
+  background: #07170eb8;
+  color: #fff;
+  font: 500 9px DM Mono, monospace;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.gallery-toolbar,
+.gallery-dialog-toolbar {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  min-height: 58px;
+  border-top: 1px solid #ffffff35;
+  color: #fff;
+}
+
+.gallery-toolbar p,
+.gallery-dialog-toolbar p {
+  margin: 0;
+  text-align: center;
+  font: 500 10px DM Mono, monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.gallery-separator {
+  padding: 0 7px;
+  color: var(--acid);
+}
+
+.gallery-arrow {
+  align-self: stretch;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible {
+  background: #ffffff12;
+  color: var(--acid);
+}
+
+.gallery-dots {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 5px;
+  padding: 0 12px 12px;
+}
+
+.gallery-dots button {
+  height: 3px;
+  padding: 0;
+  border: 0;
+  background: #ffffff42;
+  cursor: pointer;
+}
+
+.gallery-dots button.active {
+  background: var(--acid);
+}
+
+.gallery-dialog {
+  width: min(1180px, 92vw);
+  max-width: none;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ffffff38;
+  background: #0b1912;
+  color: #fff;
+}
+
+.gallery-dialog::backdrop {
+  background: #06100bdb;
+  backdrop-filter: blur(7px);
+}
+
+.gallery-dialog-frame {
+  display: grid;
+  place-items: center;
+  height: min(72vh, 760px);
+  background: #10261c;
+}
+
+.gallery-dialog-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #ffffff77;
+  border-radius: 50%;
+  background: #07170ebf;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.brand-world {
+  background: #f2f0e9;
+}
+
+.brand-world-intro {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 10%;
+  align-items: end;
+}
+
+.brand-world-intro h2 {
+  font-size: clamp(43px, 5.2vw, 76px);
+}
+
+.brand-world-intro .lead {
+  max-width: 340px;
+  margin-bottom: 7px;
+}
+
+.brand-world-showcase {
+  position: relative;
+  margin: 54px 0 0;
+  overflow: hidden;
+  background: #10261c;
+}
+
+.brand-world-showcase img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
+.brand-world-showcase figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 18px;
+  color: #dce3de;
+  background: #10261c;
+  font: 500 10px DM Mono, monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.dealer-environment {
+  position: relative;
+  min-height: min(64vw, 900px);
+  overflow: hidden;
+  color: #fff;
+  background: #10261c;
+}
+
+.dealer-environment > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dealer-environment::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #06140df0 0%, #06140da3 40%, #06140d0a 78%);
+}
+
+.dealer-environment-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 690px;
+  padding: 12% 10%;
+}
+
+.dealer-environment-copy h2 {
+  font-size: clamp(46px, 5.6vw, 84px);
+}
+
+.dealer-environment-copy > p:last-child {
+  max-width: 440px;
+  color: #d7e0da;
+  line-height: 1.7;
+}
+
+@media (max-width: 1020px) {
+  .site-header nav {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 800px) {
+  .brand-lockup img {
+    width: 112px;
+  }
+
+  .language-trigger {
+    min-width: 72px;
+    min-height: 36px;
+    padding-inline: 9px;
+  }
+
+  .language-menu {
+    position: fixed;
+    top: 64px;
+    right: 4vw;
+    left: auto;
+    width: min(250px, 92vw);
+  }
+
+  html[dir="rtl"] .language-menu {
+    right: auto;
+    left: 4vw;
+  }
+
+  .benefit-grid article {
+    min-height: 0;
+    padding-top: 20px;
+    padding-bottom: 26px;
+  }
+
+  .benefit-grid h3 {
+    margin-top: 24px;
+  }
+
+  .gallery-heading,
+  .brand-world-intro {
+    display: block;
+  }
+
+  .gallery-intro,
+  .brand-world-intro .lead {
+    margin-top: 24px;
+  }
+
+  .gallery-viewer,
+  .brand-world-showcase {
+    margin-top: 36px;
+  }
+
+  .gallery-stage img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-toolbar,
+  .gallery-dialog-toolbar {
+    grid-template-columns: 46px 1fr 46px;
+  }
+
+  .gallery-toolbar p,
+  .gallery-dialog-toolbar p {
+    padding: 0 4px;
+    font-size: 8px;
+    letter-spacing: .06em;
+  }
+
+  .gallery-open-label {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .gallery-dialog {
+    width: 96vw;
+  }
+
+  .gallery-dialog-frame {
+    height: 66vh;
+  }
+
+  .brand-world-showcase img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dealer-environment {
+    min-height: 680px;
+  }
+
+  .dealer-environment > img {
+    object-position: 58% center;
+  }
+
+  .dealer-environment::after {
+    background: linear-gradient(0deg, #06140df4 0%, #06140db0 42%, #06140d0a 80%);
+  }
+
+  .dealer-environment-copy {
+    padding: 88% 7% 12%;
+  }
+
+  .footer-lockup img {
+    width: 104px;
+  }
+}
+
+/* Hover zoom composes with scroll transforms through the independent scale property. */
+.platform-image-frame { display:block; overflow:hidden; border-radius:14px; box-shadow:0 18px 38px #10261c17; }
+.platform-image-frame img { border-radius:0; box-shadow:none; }
+.brand-world-showcase figcaption { position:relative; z-index:1; }
+@media (hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .hero-image, .platform-visual img, .gallery-stage img,
+  .brand-world-showcase img, .product-detail > img, .dealer-environment > img {
+    scale:1;
+    transition:scale 1.35s cubic-bezier(.22,1,.36,1);
+    transform-origin:center;
+  }
+  .hero:hover .hero-image { scale:1.045; }
+  .platform-image-frame:hover img, .gallery-stage:hover img { scale:1.065; }
+  .brand-world-showcase:hover img { scale:1.055; }
+  .product-detail:hover > img, .dealer-environment:hover > img { scale:1.045; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .hero-image, .platform-visual img, .gallery-stage img,
+  .brand-world-showcase img, .product-detail > img, .dealer-environment > img { scale:1; }
+}
