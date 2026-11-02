@@ -560,3 +560,17 @@ html[dir="rtl"] .button {
   .hero-image, .platform-visual img, .gallery-stage img,
   .brand-world-showcase img, .product-detail > img, .dealer-environment > img { scale:1; }
 }
+
+.inquiry-form { max-width: 760px; margin-top: 38px; }
+.inquiry-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+.inquiry-form label { display:grid; gap:7px; margin:0 0 14px; color:#e9f0ea; font-size:12px; font-weight:700; letter-spacing:.04em; }
+.inquiry-form input, .inquiry-form textarea { width:100%; border:1px solid #ffffff44; border-radius:2px; background:#ffffff0d; color:#fff; font:400 15px/1.45 Manrope,Arial,sans-serif; padding:12px 13px; }
+.inquiry-form textarea { resize:vertical; }
+.inquiry-form input:focus, .inquiry-form textarea:focus { outline:2px solid var(--acid); outline-offset:2px; }
+.inquiry-form .inquiry-consent { display:flex; align-items:flex-start; gap:10px; color:#d5e0d7; font-size:11px; font-weight:500; line-height:1.45; letter-spacing:0; }
+.inquiry-consent input { width:16px; height:16px; margin-top:1px; accent-color:var(--acid); }
+.inquiry-honeypot { position:absolute !important; left:-9999px !important; width:1px !important; height:1px !important; opacity:0 !important; }
+.inquiry-status { min-height:22px; margin:18px 0 0; color:var(--acid); font-size:13px; }
+.inquiry-form .button { border:0; cursor:pointer; }
+.inquiry-form .button:disabled { cursor:wait; opacity:.68; }
+@media(max-width:640px){ .inquiry-grid { grid-template-columns:1fr; } }
